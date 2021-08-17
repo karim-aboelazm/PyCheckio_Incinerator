@@ -1,0 +1,37 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "class Army:\n    pass\n\nclass Swordsman:\n    pass\n\nclass Lancer:\n  \
+    \  pass\n\nclass Archer:\n    pass\n\nclass AsianArmy(Army):\n    pass\n\nclass\
+    \ EuropeanArmy(Army):\n    pass\n\n\nif __name__ == '__main__':\n    #These \"\
+    asserts\" using only for self-checking and not necessary for auto-testing\n\n\
+    \    my_army = EuropeanArmy()\n    enemy_army = AsianArmy()\n\n    soldier_1 =\
+    \ my_army.train_swordsman(\"Jaks\")\n    soldier_2 = my_army.train_lancer(\"Harold\"\
+    )\n    soldier_3 = my_army.train_archer(\"Robin\")\n\n    soldier_4 = enemy_army.train_swordsman(\"\
+    Kishimoto\")\n    soldier_5 = enemy_army.train_lancer(\"Ayabusa\")\n    soldier_6\
+    \ = enemy_army.train_archer(\"Kirigae\")\n\n    assert soldier_1.introduce() ==\
+    \ \"Knight Jaks, European swordsman\"\n    assert soldier_2.introduce() == \"\
+    Raubritter Harold, European lancer\"\n    assert soldier_3.introduce() == \"Ranger\
+    \ Robin, European archer\"\n    \n    assert soldier_4.introduce() == \"Samurai\
+    \ Kishimoto, Asian swordsman\"\n    assert soldier_5.introduce() == \"Ronin Ayabusa,\
+    \ Asian lancer\"\n    assert soldier_6.introduce() == \"Shinobi Kirigae, Asian\
+    \ archer\"\n\n    print(\"Coding complete? Let's try tests!\")\n"
+  learner_created: false
+status: Unchecked
+code: "class Army:\n    pass\n\nclass Swordsman:\n    pass\n\nclass Lancer:\n    pass\n\
+  \nclass Archer:\n    pass\n\nclass AsianArmy(Army):\n    pass\n\nclass EuropeanArmy(Army):\n\
+  \    pass\n\n\nif __name__ == '__main__':\n    #These \"asserts\" using only for\
+  \ self-checking and not necessary for auto-testing\n\n    my_army = EuropeanArmy()\n\
+  \    enemy_army = AsianArmy()\n\n    soldier_1 = my_army.train_swordsman(\"Jaks\"\
+  )\n    soldier_2 = my_army.train_lancer(\"Harold\")\n    soldier_3 = my_army.train_archer(\"\
+  Robin\")\n\n    soldier_4 = enemy_army.train_swordsman(\"Kishimoto\")\n    soldier_5\
+  \ = enemy_army.train_lancer(\"Ayabusa\")\n    soldier_6 = enemy_army.train_archer(\"\
+  Kirigae\")\n\n    assert soldier_1.introduce() == \"Knight Jaks, European swordsman\"\
+  \n    assert soldier_2.introduce() == \"Raubritter Harold, European lancer\"\n \
+  \   assert soldier_3.introduce() == \"Ranger Robin, European archer\"\n    \n  \
+  \  assert soldier_4.introduce() == \"Samurai Kishimoto, Asian swordsman\"\n    assert\
+  \ soldier_5.introduce() == \"Ronin Ayabusa, Asian lancer\"\n    assert soldier_6.introduce()\
+  \ == \"Shinobi Kirigae, Asian archer\"\n\n    print(\"Coding complete? Let's try\
+  \ tests!\")\n"
+seconds_from_change: 9223372036854775807

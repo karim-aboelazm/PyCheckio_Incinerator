@@ -1,0 +1,181 @@
+<h2>Every Person is Unique</h2>
+<style>
+ pre.example {
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        background: #eee;
+        margin-left: 20px;
+        padding: 5px;
+        overflow: auto;
+    }
+
+    p.indent {
+        margin-left: 20px;
+    }
+</style>
+<p>
+ Every year, the number of your friends is increasing and monitoring information about their lives is becoming more difficult. Let's simplify and slightly automate this process. 
+Indeed, the simplification of routine processes is one of the key programming tasks.
+</p>
+<p>
+ You have to create a class ‘Person’ and a few methods to work with its instances. See the class description below.
+</p>
+<p>
+ <em>
+  class
+ </em>
+ <strong>
+  Person
+ </strong>
+ <em>
+  (first_name, last_name, birth_date, job, working_years, salary, country, city, gender='unknown')
+ </em>
+</p>
+<p class="indent">
+ It returns a new instance  of the ‘Person’ class  with the name and surname [
+ <em>
+  first_name
+ </em>
+ ,
+ <em>
+  last_name
+ </em>
+ ], date of birth -
+ <em>
+  birth_date
+ </em>
+ (in 'dd.mm.yyyy' format), current job -
+ <em>
+  job
+ </em>
+ , number of working years -
+ <em>
+  working_years
+ </em>
+ , average salary -
+ <em>
+  salary
+ </em>
+ (per month), current country and city - [
+ <em>
+  country
+ </em>
+ ,
+ <em>
+  city
+ </em>
+ ] and gender -
+ <em>
+  gender
+ </em>
+ . The gender parameter could be 'male' or 'female'. If this parameter is undefined, the default value is - 'unknown'.
+</p>
+<pre class="brush: python">
+Person(‘John’, ‘Smith’, ‘19.09.1979’, ‘welder’, 15, 3600, ‘Canada’, ‘Vancouver’, ‘male’) ==
+Person(‘John’, ‘Smith’, ‘19.09.1979’, ‘welder’, 15, 3600, ‘Canada’, ‘Vancouver’, ‘male’)
+
+Person(‘Hanna Rose’, ‘May’, ‘05.12.1995’, ‘designer’, 2.2, 2150, ‘Austria’, ‘Vienna’) ==
+Person(‘Hanna Rose’, ‘May’, ‘05.12.1995’, ‘designer’, 2.2, 2150, ‘Austria’, ‘Vienna’, ‘unknown’)
+</pre>
+<br/>
+<p>
+ <strong>
+  name
+ </strong>
+ ()
+</p>
+<p class="indent">
+ Returns the full name (name and surname, separated by a whitespace).
+</p>
+<pre class="brush: python">
+Person (‘John’, ‘Smith’, ‘19.09.1979’, ‘welder’, 15, 3600, ‘Canada’, ‘Vancouver’, ‘male’).name() == ‘John Smith’
+</pre>
+<br/>
+<p>
+ <strong>
+  age
+ </strong>
+ ()
+</p>
+<p class="indent">
+ Returns the person’s age - the number of fully lived years. (The current date is 01.01.2018)
+</p>
+<pre class="brush: python">
+Person (‘John’, ‘Smith’, ‘19.09.1979’, ‘welder’, 15, 3600, ‘Canada’, ‘Vancouver’, ‘male’).age() == 38
+</pre>
+<br/>
+<p>
+ <strong>
+  work
+ </strong>
+ ()
+</p>
+<p class="indent">
+ Returns the person’s job in a sentence as follows:
+‘He is a ...’ (if male)
+‘She is a ...’ (if female)
+‘Is a ...’ (if unknown)
+</p>
+<pre class="brush: python">
+Person (‘Hanna Rose’, ‘May’, ‘05.12.1995’, ‘designer’, 2.2, 2150, ‘Austria’, ‘Vienna’).work() == ‘Is a designer’
+</pre>
+<br/>
+<p>
+ <strong>
+  money
+ </strong>
+ ()
+</p>
+<p class="indent">
+ Returns an amount of money, earned during the working years. It should be returned in format xx xxx … - every 3 decimal places should be separated by a whitespace. For example:
+‘10 568’
+‘1 051 422’
+</p>
+<pre class="brush: python">
+Person (‘John’, ‘Smith’, ‘19.09.1979’, ‘welder’, 15, 3600, ‘Canada’, ‘Vancouver’, ‘male’).money() == ‘648 000’
+</pre>
+<br/>
+<p>
+ <strong>
+  home
+ </strong>
+ ()
+</p>
+<p class="indent">
+ Returns the country and the city where a person lives:
+‘Lives in the city, country’
+</p>
+<pre class="brush: python">
+Person (‘Hanna Rose’, ‘May’, ‘05.12.1995’, ‘designer’, 2.2, 2150, ‘Austria’, ‘Vienna’).home() == ‘Lives in Vienna, Austria’
+</pre>
+<br/>
+<p>
+ In this mission all data will be correct and you won't need to implement the value checking.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Statements and expressions that use the ‘Person’ class.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The behaviour of an instance as described above.
+</p>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ Work with classes and object-oriented programming is considered to be on a much higher skill level which you should reach in order to put Python to full use.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ All data is correct.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/every-person-is-unique">See the task on CheckiO</a></p>

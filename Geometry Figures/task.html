@@ -1,0 +1,90 @@
+<h2>Geometry Figures</h2>
+<p>
+ You often work with the different geometrical figures and with their parameters - the perimeter, area, and volume. You are tired of doing it manually, so you’ve decided to automate this process, and therefore you need to write a particular program. In this program you should create the class Parameters which will choose one of the few figures (the circle, regular triangle, square, regular pentagon, regular hexagon, cube) using the
+ <strong>
+  choose_figure()
+ </strong>
+ method and will count the perimeter, area, and volume with the help of the following methods:
+ <br/>
+ <br/>
+ <strong>
+  perimeter()
+ </strong>
+ - returns the perimeter of the figure;
+ <br/>
+ <strong>
+  area()
+ </strong>
+ - returns the area of the figure;
+ <br/>
+ <strong>
+  volume()
+ </strong>
+ - returns the volume of the figure.
+ <br/>
+ <br/>
+ Also you have to create a class for each figure and use the
+ <a href="https://en.wikipedia.org/wiki/Strategy_pattern">
+  Strategy
+ </a>
+ design pattern to solve this mission.
+ <br/>
+ Every figure, except the cube, has the volume = 0.
+ <br/>
+ If the result has no decimal places, you should return it as int(), in other case - round it to the 2 decimal points.
+</p>
+<p>
+ <strong>
+  Examples
+ </strong>
+ :
+ <pre class="brush: python">
+figure = Parameters(10)
+    
+figure.choose_figure(Circle())
+figure.area() == 314.16
+
+figure.choose_figure(Triangle())
+figure.perimeter() == 30
+
+figure.choose_figure(Square())
+figure.area() == 100
+
+figure.choose_figure(Pentagon())
+figure.perimeter() == 50
+
+figure.choose_figure(Hexagon())
+figure.perimeter() == 60
+
+figure.choose_figure(Cube())
+figure.volume() == 1000
+</pre>
+</p>
+<br/>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Statements and expressions of the classes.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The perimeter, area, and volume (number).
+</p>
+<p class="for_info_only">
+ <strong>
+  Hot it is used:
+ </strong>
+ For the geometrical object analysis.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ All data is correct.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/geometry-figures">See the task on CheckiO</a></p>

@@ -1,0 +1,100 @@
+<h2>Dialogues</h2>
+<p>
+ The modern world is filled with means of communication - the social networks, messengers, phone calls, SMS etc.
+But sometimes in every communication channel a flaw can be detected and in the moments like that you think to yourself: "I should create my own messenger which won’t have problems like this one".
+ <br/>
+ In this mission you’ll get your chance.
+ <br/>
+ Your task is to create a Chat class which could help a Human(name) and Robot(serial_number) to make a conversation. This class should have a few methods:
+ <br/>
+ <strong>
+  connect_human()
+ </strong>
+ - connects human to the chat.
+ <br/>
+ <strong>
+  connect_robot()
+ </strong>
+ - connects robot to the chat.
+ <br/>
+ <strong>
+  show_human_dialogue()
+ </strong>
+ - shows the dialog as the human sees it - as simple text.
+ <br/>
+ <strong>
+  show_robot_dialogue()
+ </strong>
+ - shows the dialog as the robot perceives it - as the set of ones and zeroes. To simplify the task, just replace every vowel ('aeiouAEIOU') with "0", and the rest symbols (consonants, white spaces and special signs like ",", "!", etc.) with "1".
+ <br/>
+ Dialog for the human should be displayed like this:
+ <br/>
+ (human name) said: message text
+ <br/>
+ (robot serial number): message text
+ <br/>
+ For the robot:
+ <br/>
+ (human name) said: 11100100011
+ <br/>
+ (robot serial number) said: 100011100101
+ <br/>
+ Interlocutors should have a
+ <strong>
+  send()
+ </strong>
+ method for sending messages to the dialog.
+ <br/>
+ In this mission you could use the
+ <a href="https://en.wikipedia.org/wiki/Mediator_pattern">
+  Mediator
+ </a>
+ design pattern.
+</p>
+<p>
+ <strong>
+  Example
+ </strong>
+ :
+ <pre class="brush: python">
+chat = Chat()
+karl = Human("Karl")
+bot = Robot("R2D2")
+chat.connect_human(karl)
+chat.connect_robot(bot)
+karl.send("Hi! What's new?")
+bot.send("Hello, human. Could we speak later about it?")
+chat.show_human_dialogue() == """Karl said: Hi! What's new?
+R2D2 said: Hello, human. Could we speak later about it?"""
+chat.show_robot_dialogue() == """Karl said: 101111011111011
+R2D2 said: 10110111010111100111101110011101011010011011"""
+</pre>
+</p>
+<br/>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Interlocutors and the text of messages.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A dialog (the multiline string).
+</p>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ For creating a connection and sending/receiving the information.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ 2 interlocutors.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/dialogues">See the task on CheckiO</a></p>

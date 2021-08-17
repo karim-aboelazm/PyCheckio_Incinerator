@@ -1,0 +1,58 @@
+<h2>Capital City</h2>
+<p>
+ You are an active traveler who have visited a lot of countries. The main city in the every country is its capital and each country can have only one capital city.
+So your task is to create the class Capital which has some special properties: the first created instance of this class will be unique and single, and all of the other instances should be the same as the very first one.
+ <br/>
+ Also you should add the
+ <strong>
+  name()
+ </strong>
+ method which returns the name of the capital.
+ <br/>
+ In this mission you should use the
+ <a href="https://en.wikipedia.org/wiki/Singleton_pattern">
+  Singleton
+ </a>
+ design pattern.
+</p>
+<p>
+ <strong>
+  Example
+ </strong>
+ :
+ <pre class="brush: python">
+ukraine_capital_1 = Capital("Kyiv")
+ukraine_capital_2 = Capital("London")
+ukraine_capital_3 = Capital("Marocco")
+ukraine_capital_2.name() == "Kyiv"
+ukraine_capital_3.name() == "Kyiv"
+</pre>
+</p>
+<br/>
+<p>
+ <strong>
+  Input:
+ </strong>
+ The class Capital.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The name of the capital.
+</p>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ For creation of a unique object as a single instance.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ All data is correct.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/capital-city">See the task on CheckiO</a></p>

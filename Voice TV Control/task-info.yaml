@@ -1,0 +1,25 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "class VoiceCommand:\n    pass\n\n\nif __name__ == '__main__':\n    #These\
+    \ \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+    \n    CHANNELS = [\"BBC\", \"Discovery\", \"TV1000\"]\n\n    controller = VoiceCommand(CHANNELS)\n\
+    \    \n    assert controller.first_channel() == \"BBC\"\n    assert controller.last_channel()\
+    \ == \"TV1000\"\n    assert controller.turn_channel(1) == \"BBC\"\n    assert\
+    \ controller.next_channel() == \"Discovery\"\n    assert controller.previous_channel()\
+    \ == \"BBC\"\n    assert controller.current_channel() == \"BBC\"\n    assert controller.is_exist(4)\
+    \ == \"No\"\n    assert controller.is_exist(\"TV1000\") == \"Yes\"\n    print(\"\
+    Coding complete? Let's try tests!\")\n"
+  learner_created: false
+status: Unchecked
+code: "class VoiceCommand:\n    pass\n\n\nif __name__ == '__main__':\n    #These \"\
+  asserts\" using only for self-checking and not necessary for auto-testing\n\n  \
+  \  CHANNELS = [\"BBC\", \"Discovery\", \"TV1000\"]\n\n    controller = VoiceCommand(CHANNELS)\n\
+  \    \n    assert controller.first_channel() == \"BBC\"\n    assert controller.last_channel()\
+  \ == \"TV1000\"\n    assert controller.turn_channel(1) == \"BBC\"\n    assert controller.next_channel()\
+  \ == \"Discovery\"\n    assert controller.previous_channel() == \"BBC\"\n    assert\
+  \ controller.current_channel() == \"BBC\"\n    assert controller.is_exist(4) ==\
+  \ \"No\"\n    assert controller.is_exist(\"TV1000\") == \"Yes\"\n    print(\"Coding\
+  \ complete? Let's try tests!\")\n"
+seconds_from_change: 9223372036854775807

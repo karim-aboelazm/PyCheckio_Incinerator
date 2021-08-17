@@ -1,0 +1,91 @@
+<h2>Party Invitations</h2>
+<p>
+ Each week you are meeting with your friends to spend some quality time together. Usually you're hanging out in a bar on Friday nights, or going out of town on Saturdays, or playing the board games on Sundays. You want to simplify the process of gathering people and that's why you've decided to write a program which could automate this process.
+ <br/>
+ You should create the class Party(place) which will send the invites to all of your friends.
+Also you should create the class Friend and each friend will be an instance of this class.
+ <br/>
+ Sometimes the circle of friends is changing - new friends appear, the old ones disappear from your life (for example - move to another town). To form right connections you should create the Party class with the next methods:
+ <br/>
+ <br/>
+ <strong>
+  add_friend
+ </strong>
+ (Friend(name)) - add friend 'name' to the list of the 'observers' (people, which will get the invitations, when the new party is scheduled).
+ <br/>
+ <strong>
+  del_friend
+ </strong>
+ (friend) - remove 'friend' from the 'observers' list.
+ <br/>
+ <strong>
+  send_invites()
+ </strong>
+ - send the invites with the right day and time to the each person on the list of 'observers'.
+ <br/>
+ Class Friend should have the
+ <strong>
+  show_invite()
+ </strong>
+ method which returns the string with the last invite that the person has received with the right place, day and time. The right place - is the 'place' which is given to the Party instance in the moment of creation. If the person didn't get any invites, this method should return - "No party..."
+ <br/>
+ In this mission you could use the
+ <a href="https://en.wikipedia.org/wiki/Observer_pattern">
+  Observer
+ </a>
+ design pattern.
+</p>
+<p>
+ <strong>
+  Examples
+ </strong>
+ :
+ <pre class="brush: python">
+party = Party("Midnight Pub")
+nick = Friend("Nick")
+john = Friend("John")
+lucy = Friend("Lucy")
+chuck = Friend("Chuck")
+
+party.add_friend(nick)
+party.add_friend(john)
+party.add_friend(lucy)
+party.send_invites("Friday, 9:00 PM")
+party.del_friend(nick)
+party.send_invites("Saturday, 10:00 AM")
+party.add_friend(chuck)
+
+john.show_invite() == "Midnight Pub: Saturday, 10:00 AM"
+lucy.show_invite() == "Midnight Pub: Saturday, 10:00 AM"
+nick.show_invite() == "Midnight Pub: Friday, 9:00 PM"
+chuck.show_invite() == "No party..."
+</pre>
+</p>
+<br/>
+<p>
+ <strong>
+  Input:
+ </strong>
+ The Party class methods and friends.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The text of the last invite received by a person.
+</p>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ For automatic notifications mailout about the information changes to all of the observers.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ All friends' names will be different.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/party-invitations">See the task on CheckiO</a></p>

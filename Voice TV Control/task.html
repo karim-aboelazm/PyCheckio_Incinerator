@@ -1,0 +1,99 @@
+<h2>Voice TV Control</h2>
+<p>
+ The technologies are rapidly evolving - only 50 years ago a simple black-and-white TV was a luxury! And now even a cool big color TV with remote control is a common thing. Let's try to improve our TV and add the voice control to it! To begin with, we’ll write the simple prototype in Python. It’ll use the following commands:
+ <br/>
+ <br/>
+ <strong>
+  first_channel()
+ </strong>
+ - turns on the first channel from the list.
+ <br/>
+ <strong>
+  last_channel()
+ </strong>
+ - turns on the last channel from the list.
+ <br/>
+ <strong>
+  turn_channel(N)
+ </strong>
+ - turns on the N channel. Pay attention that the channel numbers start from 1, not from 0.
+ <br/>
+ <strong>
+  next_channel()
+ </strong>
+ - turns on the next channel. If the current channel is the last one, turns on the first channel.
+ <br/>
+ <strong>
+  previous_channel()
+ </strong>
+ - turns on the previous channel. If the current channel is the first one, turns on the last channel.
+ <br/>
+ <strong>
+  current_channel()
+ </strong>
+ - returns the name of the current channel.
+ <br/>
+ <strong>
+  is_exist(N/'name')
+ </strong>
+ - gets 1 argument - the number N or the string 'name' and returns "Yes", if the channel N or 'name' exists in the list, or "No" - in the other case.
+ <br/>
+ <br/>
+ The default channel turned on before all commands is №1.
+ <br/>
+ Your task is to create the VoiceCommand class and methods described above.
+ <br/>
+ In this mission you could use the
+ <a href="https://en.wikipedia.org/wiki/Iterator_pattern">
+  Iterator
+ </a>
+ design pattern.
+</p>
+<p>
+ <strong>
+  Example
+ </strong>
+ :
+ <pre class="brush: python">
+CHANNELS = ["BBC", "Discovery", "TV1000"]
+
+controller = VoiceCommand(CHANNELS)
+
+controller.first_channel() == "BBC"
+controller.last_channel() == "TV1000"
+controller.turn_channel(1) == "BBC"
+controller.next_channel() == "Discovery"
+controller.previous_channel() == "BBC"
+controller.current_channel() == "BBC"
+controller.is_exist(4) == "No"
+controller.is_exist("BBC") == "Yes"
+</pre>
+</p>
+<br/>
+<p>
+ <strong>
+  Input:
+ </strong>
+ The voice commands.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The channel name or result of the is_exist method.
+</p>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ For work with the iterable objects.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ All commands and channel names are correct.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/voice-tv-control">See the task on CheckiO</a></p>

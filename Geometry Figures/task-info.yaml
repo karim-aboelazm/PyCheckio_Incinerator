@@ -1,0 +1,29 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "class Parameters:\n    pass\n\nclass Circle:\n    pass\n\nclass Triangle:\n\
+    \    pass\n\nclass Square:\n    pass\n\nclass Pentagon:\n    pass\n\nclass Hexagon:\n\
+    \    pass\n\nclass Cube:\n    pass\n\n\nif __name__ == '__main__':\n    #These\
+    \ \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+    \n    figure = Parameters(10)\n    \n    figure.choose_figure(Circle())\n    assert\
+    \ figure.area() == 314.16\n\n    figure.choose_figure(Triangle())\n    assert\
+    \ figure.perimeter() == 30\n\n    figure.choose_figure(Square())\n    assert figure.area()\
+    \ == 100\n\n    figure.choose_figure(Pentagon())\n    assert figure.perimeter()\
+    \ == 50\n\n    figure.choose_figure(Hexagon())\n    assert figure.perimeter()\
+    \ == 60\n\n    figure.choose_figure(Cube())\n    assert figure.volume() == 1000\n\
+    \n    print(\"Coding complete? Let's try tests!\")\n"
+  learner_created: false
+status: Unchecked
+code: "class Parameters:\n    pass\n\nclass Circle:\n    pass\n\nclass Triangle:\n\
+  \    pass\n\nclass Square:\n    pass\n\nclass Pentagon:\n    pass\n\nclass Hexagon:\n\
+  \    pass\n\nclass Cube:\n    pass\n\n\nif __name__ == '__main__':\n    #These \"\
+  asserts\" using only for self-checking and not necessary for auto-testing\n\n  \
+  \  figure = Parameters(10)\n    \n    figure.choose_figure(Circle())\n    assert\
+  \ figure.area() == 314.16\n\n    figure.choose_figure(Triangle())\n    assert figure.perimeter()\
+  \ == 30\n\n    figure.choose_figure(Square())\n    assert figure.area() == 100\n\
+  \n    figure.choose_figure(Pentagon())\n    assert figure.perimeter() == 50\n\n\
+  \    figure.choose_figure(Hexagon())\n    assert figure.perimeter() == 60\n\n  \
+  \  figure.choose_figure(Cube())\n    assert figure.volume() == 1000\n\n    print(\"\
+  Coding complete? Let's try tests!\")\n"
+seconds_from_change: 9223372036854775807

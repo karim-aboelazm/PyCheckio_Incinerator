@@ -1,0 +1,31 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "class MicrowaveBase:\n    pass\n\nclass Microwave1(MicrowaveBase):\n    pass\n\
+    \nclass Microwave2(MicrowaveBase):\n    pass\n\nclass Microwave3(MicrowaveBase):\n\
+    \    pass\n\nclass RemoteControl:\n    pass\n\n\nif __name__ == '__main__':\n\
+    \    #These \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+    \n    microwave_1 = Microwave1()\n    microwave_2 = Microwave2()\n    microwave_3\
+    \ = Microwave3()\n\n    remote_control_1 = RemoteControl(microwave_1)\n    remote_control_1.set_time(\"\
+    01:00\")\n\n    remote_control_2 = RemoteControl(microwave_2)\n    remote_control_2.add_time(\"\
+    90s\")\n    \n    remote_control_3 = RemoteControl(microwave_3)\n    remote_control_3.del_time(\"\
+    300s\")\n    remote_control_3.add_time(\"100s\")\n    \n    assert remote_control_1.show_time()\
+    \ == \"_1:00\"\n    assert remote_control_2.show_time() == \"01:3_\"\n    assert\
+    \ remote_control_3.show_time() == \"01:40\"\n    print(\"Coding complete? Let's\
+    \ try tests!\")\n"
+  learner_created: false
+status: Unchecked
+code: "class MicrowaveBase:\n    pass\n\nclass Microwave1(MicrowaveBase):\n    pass\n\
+  \nclass Microwave2(MicrowaveBase):\n    pass\n\nclass Microwave3(MicrowaveBase):\n\
+  \    pass\n\nclass RemoteControl:\n    pass\n\n\nif __name__ == '__main__':\n  \
+  \  #These \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+  \n    microwave_1 = Microwave1()\n    microwave_2 = Microwave2()\n    microwave_3\
+  \ = Microwave3()\n\n    remote_control_1 = RemoteControl(microwave_1)\n    remote_control_1.set_time(\"\
+  01:00\")\n\n    remote_control_2 = RemoteControl(microwave_2)\n    remote_control_2.add_time(\"\
+  90s\")\n    \n    remote_control_3 = RemoteControl(microwave_3)\n    remote_control_3.del_time(\"\
+  300s\")\n    remote_control_3.add_time(\"100s\")\n    \n    assert remote_control_1.show_time()\
+  \ == \"_1:00\"\n    assert remote_control_2.show_time() == \"01:3_\"\n    assert\
+  \ remote_control_3.show_time() == \"01:40\"\n    print(\"Coding complete? Let's\
+  \ try tests!\")\n"
+seconds_from_change: 9223372036854775807

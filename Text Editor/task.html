@@ -1,0 +1,96 @@
+<h2>Text Editor</h2>
+<p>
+ I believe that many of you have dealt with such a problem. One day you are working in the text editor, saving the document and closing it. And the next day you are re-reading the text and realizing that one of the previous versions was better but there is no way to get it back. This thing can be easily handled by the version control system (for example, git), but it’s used mostly by the developers and not the ordinary people who work with texts. In this mission you’ll help the latter by creating a text editor prototype that supports the version control system, which will allow to save different versions of the text and restore any one of them.
+ <br/>
+ Your task is to create 2 classes: Text and SavedText. The first will works with texts (adding, font changing, etc.), the second will control the versions and save them.
+ <br/>
+ <br/>
+ Class Text should have the next methods:
+ <br/>
+ <strong>
+  write
+ </strong>
+ (text) - adds (text) to the current text;
+ <br/>
+ <strong>
+  set_font
+ </strong>
+ (font name) - sets the chosen font. Font is applied to the whole text, even if it’s added after the font is set. The font is displayed in the square brackets before and after the text: "[Arial]...example...[Arial]". Font can be specified multiple times but only the last variant is displays;
+ <br/>
+ <strong>
+  show()
+ </strong>
+ - returns the current text and font (if is was set);
+ <br/>
+ <strong>
+  restore
+ </strong>
+ (SavedText.get_version(number)) - restores the text of the chosen version.
+ <br/>
+ <br/>
+ Class SavedText should have the next methods:
+ <br/>
+ <strong>
+  save_text
+ </strong>
+ (Text) - saves the current text and font. The first saved version has the number 0, the second - 1, and so on;
+ <br/>
+ <strong>
+  get_version
+ </strong>
+ (number) - this method works with the 'restore' method and is used for choosing the needed version of the text.
+ <br/>
+ <br/>
+ In this mission you can use the
+ <a href="https://en.wikipedia.org/wiki/Memento_pattern">
+  Memento
+ </a>
+ design pattern.
+</p>
+<p>
+ <strong>
+  Example
+ </strong>
+ :
+ <pre class="brush: python">
+text = Text()
+saver = SavedText()
+    
+text.write("At the very beginning ")
+saver.save_text(text)
+text.set_font("Arial")
+saver.save_text(text)
+text.write("there was nothing.")
+text.show() == "[Arial]At the very beginning there was nothing.[Arial]"
+    
+text.restore(saver.get_version(0))
+text.show() == "At the very beginning "
+</pre>
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ information about the text and saved copies.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ the text after all of the commands.
+</p>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ To save the object’s previous states with the ability to return to them, in case something goes wrong.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ No more than 10 saved copies.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/text-editor">See the task on CheckiO</a></p>

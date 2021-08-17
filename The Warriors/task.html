@@ -1,0 +1,111 @@
+<h2>The Warriors</h2>
+<img class="for_info_only half" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/4e0dd625813446a595c6f45e5033d355/title.png" style="float:left; max-height: 400px; margin-right: 10px"/>
+<div class="story for_info_only">
+ One day, on a typical spring afternoon, Sir Ronald has been looking around his land, riding a horse. Nothing foretold troubles, when suddenly Sir Ronald heard a scream for help, coming from somewhere nearby:
+ <br/>
+ - "Help! Help!" - shouted a piercing young girl's voice.
+ <br/>
+ As a true knight, Sir Ronald couldn’t stay away and went to the lady’s rescue. Rushing in the direction from which the cry came, he saw a carriage. The girl peered out the window hoping to see someone who could help her.
+ <br/>
+ - "Stop!"- ordered Sir Ronald to the coachman. - "By what right are you on my land?"
+ <br/>
+ The coachman didn’t get a chance to open his mouth, as his master came out of the carriage.
+ <br/>
+ - "My respects, noble sir. I had no idea that this land is yours. My bride and I were just going to my estate, not wanting to give anyone any trouble. "
+ <br/>
+ - "A flat-out lie! I'm not his bride!" - the girl exclaimed from the window.
+ <br/>
+ - "Explain yourself, Sir. What does that mean?",- said Sir Ronald.
+ <br/>
+ - "Of course. The king of a neighboring country has promised his daughter and half his kingdom to the one who’ll save her from the outlaws who took her. I’ve defeated those bastards and now I’m taking the princess to her father. "
+ <br/>
+ - "It's not true! They were in on it together They’ve kidnapped me on his order! I saw how he paid them a bag of gold!" - The princess didn’t stop taking for a second, trying to quickly describe the situation to the miraculously appeared savior.
+ <br/>
+ - "Such behavior is unworthy of a knight! Prepare to die!",- exclaimed Sir Ronald, drawing his sword.
+- "Ha-ha-ha, simple-hearted nobleman! We’ll see about that..."
+</div>
+<p>
+ I'm sure that many of you have some experience with computer games. But have you ever wanted to change the game so that the characters or a game world would be more consistent with your idea of the perfect game? Probably, yes.
+ <br/>
+ In this mission (and in several subsequent ones, related to it) you’ll have a chance "to sit in the developer's chair" and create the logic of a simple game about battles.
+ <br/>
+ Let's start with the simple task - one-on-one duel. You need to create the class
+ <strong>
+  Warrior
+ </strong>
+ , the instances of which will have 2 parameters - health (equal to 50 points) and attack (equal to 5 points), and 1 property - is_alive, which can be True (if warrior's health is &gt; 0) or False (in the other case). In addition you have to create the second unit type - Knight, which should be the subclass of the Warrior but have the increased attack - 7. Also you have to create a function
+ <strong>
+  fight()
+ </strong>
+ , which will initiate the duel between 2 warriors and define the strongest of them. The duel occurs according to the following principle:
+ <br/>
+ Every turn, the first warrior will hit the second and this second will lose his health in the same value as the attack of the first warrior. After that, if he is still alive, the second warrior will do the same to the first one.
+ <br/>
+ The fight ends with the death of one of them. If the first warrior is still alive (and thus the other one is not anymore), the function should return
+ <strong>
+  True
+ </strong>
+ ,
+ <strong>
+  False
+ </strong>
+ otherwise.
+</p>
+<p class="for_info_only" style="text-align: center;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/4e0dd625813446a595c6f45e5033d355/warrior.png" style="max-height: 600px" title="fight"/>
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example
+  </strong>
+  :
+  <pre class="brush: python">
+chuck = Warrior()
+bruce = Warrior()
+carl = Knight()
+dave = Warrior()
+
+fight(chuck, bruce) == True
+fight(dave, carl) == False
+chuck.is_alive == True
+bruce.is_alive == False
+carl.is_alive == True
+dave.is_alive == False
+</pre>
+ </p>
+</div>
+<p>
+ <strong>
+  Input:
+ </strong>
+ The warriors.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The result of the duel (True or False).
+</p>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ For computer games development.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <ul>
+  <li>
+   2 types of units
+  </li>
+  <li>
+   All given fights have an end (for all missions).
+  </li>
+ </ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/the-warriors">See the task on CheckiO</a></p>

@@ -1,0 +1,23 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "class Text:\n    pass\n\nclass SavedText:\n    pass\n\n\nif __name__ == '__main__':\n\
+    \    #These \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+    \n    text = Text()\n    saver = SavedText()\n    \n    text.write(\"At the very\
+    \ beginning \")\n    saver.save_text(text)\n    text.set_font(\"Arial\")\n   \
+    \ saver.save_text(text)\n    text.write(\"there was nothing.\")\n\n    assert\
+    \ text.show() == \"[Arial]At the very beginning there was nothing.[Arial]\"\n\
+    \    \n    text.restore(saver.get_version(0))\n    assert text.show() == \"At\
+    \ the very beginning \"\n\n    print(\"Coding complete? Let's try tests!\")\n"
+  learner_created: false
+status: Unchecked
+code: "class Text:\n    pass\n\nclass SavedText:\n    pass\n\n\nif __name__ == '__main__':\n\
+  \    #These \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+  \n    text = Text()\n    saver = SavedText()\n    \n    text.write(\"At the very\
+  \ beginning \")\n    saver.save_text(text)\n    text.set_font(\"Arial\")\n    saver.save_text(text)\n\
+  \    text.write(\"there was nothing.\")\n\n    assert text.show() == \"[Arial]At\
+  \ the very beginning there was nothing.[Arial]\"\n    \n    text.restore(saver.get_version(0))\n\
+  \    assert text.show() == \"At the very beginning \"\n\n    print(\"Coding complete?\
+  \ Let's try tests!\")\n"
+seconds_from_change: 9223372036854775807
